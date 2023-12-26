@@ -8,7 +8,11 @@ import { defaultSEO } from "../../next-seo.config";
 import { WishlistProvider } from "../context/wishlist";
 import Layout from "../components/Layout";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, ...appProps }: AppProps) {
+  if (appProps.router.pathname.startsWith("/wallet")) {
+    return <Component {...pageProps} />;
+  }
+
   return (
     <WishlistProvider>
       <Layout>

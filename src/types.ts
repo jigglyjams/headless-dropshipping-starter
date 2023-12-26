@@ -99,3 +99,54 @@ export type PrintfulShippingItem = {
   external_variant_id: string;
   quantity: number;
 };
+
+export type SnipcartItem = {
+  name: string;
+  unitPrice: number;
+  quantity: number;
+  type: string;
+  discountAmount: number;
+  rateOfTaxIncludedInPrice: number;
+  amount: number;
+};
+
+export interface SnipcartInvoice {
+  shippingAddress: {
+    name: string;
+    streetAndNumber: string;
+    postalCode: string;
+    country: string;
+    city: string;
+    surname: string | null;
+    region: string | null;
+  },
+  billingAddress: {
+    name: string;
+    streetAndNumber: string;
+    postalCode: string;
+    country: string;
+    city: string;
+    surname: string | null;
+    region: string | null;
+  },
+  email: string;
+  language: string;
+  currency: string;
+  amount: number
+  targetId: string;
+  items: SnipcartItem[];
+}
+
+export interface SnipcartPaymentGatewayRequest extends NextApiRequest {
+  body: {
+  invoice: SnipcartInvoice;
+  publicToken: string;
+  mode: 'test' | 'live';
+  };
+}
+
+export interface SnipcartSession {
+  invoice: SnipcartInvoice;
+  id: string;
+  paymentAuthorizationRedirectUrl: string;
+}

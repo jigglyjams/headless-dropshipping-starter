@@ -5,7 +5,7 @@ export const DEFAULT_DELEGATE_METADATA = "0x";
 
 export const paymentTerminal = {
   mainnet: "",
-  goerli: "0x0baCb87Cf7DbDdde2299D92673A938E067a9eb29",
+  goerli: "0xd89Ed8008961F68Aab849f49e122f9a1266240Db",
 }
 
 export const abi = {

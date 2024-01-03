@@ -32,7 +32,7 @@ export function usePayJuiceboxProject(inputs: PayJuiceboxProjectInputs) {
       inputs.memo || "",              // memo
       DEFAULT_DELEGATE_METADATA,      // delegateMetadata
     ],
-    value: 0,
+    value: valueInWei,
   });
   return config;
 }

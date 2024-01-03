@@ -8,7 +8,7 @@ const config = createConfig(
     infuraId: process.env.NEXT_PUBLIC_INFURA_KEY,
     walletConnectProjectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID,
     appName: "Snipcart Wallet",
-    chains: [mainnet, goerli],
+    chains: [goerli],
   }),
 );
 

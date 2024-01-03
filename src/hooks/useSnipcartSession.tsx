@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import { SnipcartSession } from "../types";
 
 const snipcartURL = "https://payment.snipcart.com/api/public/custom-payment-gateway/payment-session";

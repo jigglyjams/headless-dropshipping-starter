@@ -34,7 +34,7 @@ export default async function handler(
   const body = await response.json();
   console.log("body", body);
   if (response.ok) {
-    res.status(200).json({ success: true, returnURL: body.returnUrl });
+    res.redirect(body.returnUrl);
   } else {
     res.status(400).json({ message: "Payment not confirmed" });
   }

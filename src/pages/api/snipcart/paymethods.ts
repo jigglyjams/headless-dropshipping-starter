@@ -15,7 +15,7 @@ const paymentMethods = [
     id: "1",
     name: "Juicebox",
     iconUrl: "https://docs.juicebox.money/assets/files/jb-pfp-3e426a72d0ee2c1dc88dd5380a219f90.png/",
-    checkoutUrl: "https://8b86-47-203-73-162.ngrok-free.app/wallet",
+    checkoutUrl: "https://swagbox.up.railway.app/wallet",
   },
 ];
 

@@ -22,7 +22,7 @@ export default function WalletCheckout() {
   const valueInETH = isNaN(amountETH) ? 0 : amountETH;
   // pay config
   const config = usePayJuiceboxProject({
-    projectId: 677,
+    projectId: 1370,
     value: valueInETH,
     callerAddress: address || "",
     memo: "",

@@ -19,7 +19,7 @@ export default async function handler(
     transactionId: transactionHash,
     instructions: "Payment confirmed",
     links: {
-      refunds: "https://8b86-47-203-73-162.ngrok-free.app/api/snipcart/refund",
+      refunds: "https://swagbox.up.railway.app/api/snipcart/refund",
     }
   });
   console.log("payConfirmBody", payConfirmBody);
